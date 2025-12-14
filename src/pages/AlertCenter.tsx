@@ -18,35 +18,37 @@ export function AlertCenterPage() {
   useEffect(() => {
     if (!alerts.length) fetchAlerts();
   }, [alerts.length, fetchAlerts]);
-  const handleExportCSV = async () => {
-  try {
-    const res = await fetch('/api/alerts/export-csv');
-    const blob = await res.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'alerts.csv';
-    a.click();
-    URL.revokeObjectURL(url);
-  } catch (err) {
-    console.error('CSV export failed:', err);
-  }
-};
 
-const handleDownloadBundle = async () => {
-  try {
-    const res = await fetch('/api/alerts/download-bundle');
-    const blob = await res.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'alerts_bundle.zip';
-    a.click();
-    URL.revokeObjectURL(url);
-  } catch (err) {
-    console.error('Bundle download failed:', err);
-  }
-};
+  const handleExportCSV = async () => {
+    try {
+      const res = await fetch('/api/alerts/export-csv');
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'alerts.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('CSV export failed:', err);
+    }
+  };
+
+  const handleDownloadBundle = async () => {
+    try {
+      const res = await fetch('/api/alerts/download-bundle');
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'alerts_bundle.zip';
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Bundle download failed:', err);
+    }
+  };
+
   const filtered = useMemo(() => {
     return alerts.filter((a) => {
       const severityOk = severity === 'all' || a.severity === severity;

@@ -6,13 +6,23 @@ interface FilterBarProps {
 }
 
 export function FilterBar({ severity, type, onSeverityChange, onTypeChange }: FilterBarProps) {
+  const handleSeverityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault();
+    onSeverityChange(e.target.value);
+  };
+
+  const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault();
+    onTypeChange(e.target.value);
+  };
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
       <div className="col-span-1">
         <label className="text-xs text-muted uppercase tracking-wide">Severity</label>
         <select
           value={severity}
-          onChange={(e) => onSeverityChange(e.target.value)}
+          onChange={handleSeverityChange}
           className="w-full mt-2 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:border-primary-400 outline-none"
         >
           <option value="all">All</option>
@@ -25,7 +35,7 @@ export function FilterBar({ severity, type, onSeverityChange, onTypeChange }: Fi
         <label className="text-xs text-muted uppercase tracking-wide">Type</label>
         <select
           value={type}
-          onChange={(e) => onTypeChange(e.target.value)}
+          onChange={handleTypeChange}
           className="w-full mt-2 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:border-primary-400 outline-none"
         >
           <option value="all">All</option>
