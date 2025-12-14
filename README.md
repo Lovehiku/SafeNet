@@ -1,150 +1,260 @@
-# SafeNet Guardian 🛡
-### Cyber Shield: Hack for Change 2025
+# 🛡️ SafeNet
 
-SafeNet Guardian is a digital safety platform designed to help women and girls stay safe online by detecting, preventing, and responding to Technology-Facilitated Gender-Based Violence (TFGBV).
+### Cyber Shield — Hack for Change 2025
 
-This project directly supports the 2025 global theme:
-“UNiTE to End Digital Violence Against All Women and Girls.”
+SafeNet is a digital safety platform designed to protect women and girls from online harm by detecting, preventing, and responding to **Technology-Facilitated Gender-Based Violence (TFGBV)**.
 
----
+This project aligns with the 2025 global theme:
 
-## 🌍 What Problem Are We Solving?
-
-Today, many women and girls face online harm such as:
-- Online harassment and hate speech
-- Threats and cyberstalking
-- Online grooming and sextortion
-- Fake profiles and impersonation
-- Blackmail and non-consensual sharing
-
-Most victims:
-- Do not know if a message is dangerous
-- Lose evidence
-- Do not know where to seek help
-
-SafeNet Guardian solves this.
+> **“UNiTE to End Digital Violence Against All Women and Girls.”**
 
 ---
 
-## 🎯 What Does SafeNet Guardian Do? (In Simple Words)
+## 🌍 Background & Motivation
 
-> SafeNet Guardian checks messages, screenshots, and profiles  
-> to warn users early, save evidence, and guide them to safety.
+SafeNet is a continuation of our earlier work as a team.
+Previously, we developed **Heaven**, a class project focused on addressing **physical violence against women**. Through that project, we studied real cases and their lasting impact.
 
----
-
-## 🧭 System Flow (Step by Step)
-
-### Step 1: User Login
-- User creates an account or logs in
-- Authentication keeps user data private and secure
+As online spaces became a new ground for abuse, we recognized the urgent need to address **digital attacks** with the same seriousness. SafeNet was created to extend protection from the physical world into the digital space.
 
 ---
 
-### Step 2: Dashboard (Safety Control Center)
-- User sees all safety tools in one place
-- Easy navigation, no technical knowledge needed
+## 🌍 Problem Statement
+
+Women and girls face increasing online harm, including:
+
+* Online harassment and hate speech
+* Cyberstalking and threats
+* Online grooming and sextortion
+* Fake profiles and impersonation
+* Blackmail and non-consensual content sharing
+
+Many victims:
+
+* Cannot easily identify dangerous messages
+* Lose critical digital evidence
+* Do not know where to seek help
+
+SafeNet addresses these challenges.
 
 ---
 
-### Step 3: Text Analyzer
-Purpose: Detect harmful messages before they cause harm
+## 🎯 What SafeNet Does
 
-User:
-1. Pastes a message (chat, comment, DM)
-2. Clicks “Analyze”
-
-System:
-- Checks for threats, hate speech, grooming, harassment
-- Shows risk level and confidence score
-- Allows saving the result as evidence
+> SafeNet analyzes messages, screenshots, and online profiles
+> to provide early warnings, preserve evidence, and guide users toward safety.
 
 ---
 
-### Step 4: Screenshot Analyzer
-Purpose: Protect victims and preserve evidence
+## 🧭 System Flow
 
-User:
-1. Uploads a screenshot of a chat
-2. Clicks “Analyze Screenshot”
+### 1️⃣ User Authentication
 
-System:
-- Extracts text from the image
-- Analyzes it for harmful content
-- Allows saving results securely
+* Secure account creation and login
+* User data privacy is strictly protected
 
 ---
 
-### Step 5: Fake Profile Detector
-Purpose: Detect impersonation and scams
+### 2️⃣ Dashboard (Safety Control Center)
 
-User:
+* Central access to all safety tools
+* Simple, non-technical user experience
+
+---
+
+### 3️⃣ Text Analyzer
+
+**Purpose:** Detect harmful messages before escalation
+
+**User:**
+
+1. Pastes a message
+2. Clicks **Analyze**
+
+**System:**
+
+* Detects threats, harassment, grooming, and hate speech
+* Displays risk level and confidence score
+* Allows results to be saved as evidence
+
+---
+
+### 4️⃣ Screenshot Analyzer
+
+**Purpose:** Analyze visual evidence and preserve proof
+
+**User:**
+
+1. Uploads a chat screenshot
+2. Clicks **Analyze Screenshot**
+
+**System:**
+
+* Extracts text from the image
+* Analyzes content for harmful patterns
+* Saves results securely
+
+---
+
+### 5️⃣ Fake Profile Detector
+
+**Purpose:** Detect impersonation and scam risks
+
+**User:**
+
 1. Uploads a profile image
-2. Clicks “Scan Profile”
+2. Clicks **Scan Profile**
 
-System:
-- Checks for fake or reused images
-- Shows risk level and confidence
-- Helps user avoid scams and impersonation
+**System:**
 
----
-
-### Step 6: Alert Center
-Purpose: Evidence and safety history
-
-- All saved analyses appear here
-- Alerts are categorized by type (threat, grooming, harassment)
-- Can be used as evidence for reporting
+* Identifies reused or suspicious images
+* Displays risk level and confidence score
+* Helps users avoid impersonation and scams
 
 ---
 
-### Step 7: Awareness & Help
-Purpose: Education and support
+### 6️⃣ Alert Center
 
-- Learn about online safety
-- Access helplines
-- Understand what to do in dangerous situations
+**Purpose:** Evidence and safety history
 
----
-
-## 🧠 Why This Matters
-
-SafeNet Guardian:
-- Prevents harm before it happens
-- Helps victims feel safe and informed
-- Preserves digital evidence
-- Supports safer digital spaces for women and girls
+* Stores all saved analyses
+* Categorizes alerts by threat type
+* Supports reporting and documentation
 
 ---
 
-## 🛠 Technology Used
+### 7️⃣ Awareness & Support
 
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- Database: MongoDB
-- Authentication: JWT
-- Security-first design
+**Purpose:** Education and guidance
+
+* Online safety awareness resources
+* Guidance for responding to digital threats
+* Access to support information
 
 ---
 
-## 🚀 Future Improvements
+### 8️⃣ Browser Extension
 
-- Browser extension
-- Mobile app
-- Advanced AI models
-- Direct NGO and hotline integration
+**Purpose:** Real-time protection during everyday browsing
+
+* Real-time access while browsing
+* Allows users to analyze messages, screenshots, and profiles directly from the browser
+* Designed for quick intervention and immediate awareness
+
+---
+
+## 🧠 Impact
+
+SafeNet:
+
+* Helps prevent harm before it escalates
+* Empowers users with clarity and confidence
+* Preserves critical digital evidence
+* Promotes safer digital spaces for women and girls
+
+---
+
+## 🛠️ Technology Stack
+
+* Frontend: React + Vite
+* Backend: Node.js + Express
+* Database: MongoDB
+* Authentication: JWT
+* Security-first and privacy-focused design
+
+---
+
+## ⚙️ Setup & Running the Project
+
+### 🔹 Prerequisites
+
+Make sure you have installed:
+
+* Node.js (v18 or higher)
+* MongoDB (local or cloud)
+* Git
+
+---
+
+### 🔹 Clone the Repository
+
+```bash
+git clone https://github.com/Lovehiku/SafeNet.git
+cd safenet
+```
+
+---
+
+### 🔹 Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Run the backend server:
+
+```bash
+npm start
+# or
+node server.js
+```
+
+Backend will run on:
+
+```
+http://localhost:4000
+```
+
+---
+
+### 🔹 Frontend Setup
+
+```bash
+cd ../src
+npm install
+npm run dev
+```
+
+Frontend will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+### 🔹 Browser Extension Setup
+
+1. Open your browser (Chrome/Edge)
+2. Go to `chrome://extensions`
+3. Enable **Developer mode**
+4. Click **Load unpacked**
+5. Select the `browser-extension` folder from the project
+
+The extension will now be active and ready to use.
+
+---
+
+## 🚀 Future Enhancements
+
+* Mobile application
+* More advanced AI-driven analysis
+* Direct integration with NGOs and emergency support hotlines
 
 ---
 
 ## 👥 Target Users
 
-- Women and girls
-- Students
-- Digital safety organizations
-- Communities vulnerable to online abuse
+* Women and girls
+* Students
+* Digital safety organizations
+* Communities vulnerable to online abuse
 
 ---
 
 ## 📄 License
+
 MIT License
+
 
