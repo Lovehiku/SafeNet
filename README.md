@@ -13,7 +13,7 @@ This project aligns with the 2025 global theme:
 ## 🌍 Background & Motivation
 
 SafeNet is a continuation of our earlier work as a team.
-Previously, we developed **Heaven**, a class project focused on addressing **physical violence against women**. Through that project, we studied real cases and their lasting impact.
+Previously, we developed **SaveHeaven**, a class project focused on addressing **physical violence against women**. Through that project, we studied real cases and their lasting impact.
 
 As online spaces became a new ground for abuse, we recognized the urgent need to address **digital attacks** with the same seriousness. SafeNet was created to extend protection from the physical world into the digital space.
 
@@ -256,5 +256,6 @@ The extension will now be active and ready to use.
 ## 📄 License
 
 MIT License
+
 
 
