@@ -81,8 +81,8 @@ export function AwarenessHelpPage() {
           <div className="space-y-2">
             <div className="p-3 bg-white/5 rounded-lg">
               <p className="text-white font-semibold">National Digital Safety Helpline</p>
-              <a href="tel:+18005551234" className="text-primary-200 hover:text-primary-100">
-                +1-800-555-1234
+              <a href="tel:+251 116 672 290" className="text-primary-200 hover:text-primary-100">
+                +251-116-672-290
               </a>
             </div>
             <div className="p-3 bg-white/5 rounded-lg">
@@ -93,8 +93,8 @@ export function AwarenessHelpPage() {
             </div>
             <div className="p-3 bg-white/5 rounded-lg">
               <p className="text-white font-semibold">Crisis Text Line</p>
-              <a href="sms:741741" className="text-primary-200 hover:text-primary-100">
-                Text: 741741
+              <a href="sms:7711" className="text-primary-200 hover:text-primary-100">
+                Text: 7711
               </a>
             </div>
           </div>
