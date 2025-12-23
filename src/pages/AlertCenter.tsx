@@ -80,7 +80,8 @@ export function AlertCenterPage() {
 
       <div className="grid md:grid-cols-2 gap-4">
         {filtered.map((alert) => (
-          <AlertItem key={alert.id} alert={alert} onClick={() => setOpenAlert(alert)} />
+          <AlertItem key={alert.id} alert={alert} onClick={() => setOpenAlert(alert)}
+          />
         ))}
         {!filtered.length && !loading && <p className="text-muted">No alerts match these filters.</p>}
       </div>

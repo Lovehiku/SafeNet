@@ -7,12 +7,10 @@ interface FilterBarProps {
 
 export function FilterBar({ severity, type, onSeverityChange, onTypeChange }: FilterBarProps) {
   const handleSeverityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    e.preventDefault();
     onSeverityChange(e.target.value);
   };
 
   const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    e.preventDefault();
     onTypeChange(e.target.value);
   };
 

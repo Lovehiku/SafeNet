@@ -10,11 +10,11 @@ interface Props {
 export function AlertItem({ alert, onClick }: Props) {
   return (
     <motion.button
-      layout
       onClick={onClick}
       className="w-full text-left card-surface p-4 hover:border-primary-400/50 transition-colors"
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
+      whileTap={{ scale: 0.98 }}
     >
       <div className="flex items-start justify-between gap-3">
         <div>
