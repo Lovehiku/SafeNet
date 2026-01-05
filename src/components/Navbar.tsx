@@ -6,8 +6,7 @@ import { useAppStore } from '../store/useAppStore';
 const links = [
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/alert-center', label: 'Alert Center' },
-  { to: '/analyzer', label: 'Screenshot Analyzer' },
-  { to: '/fake-profile', label: 'Fake Profile' },
+  { to: '/analyzer', label: 'Analyzer' },
   { to: '/awareness', label: 'Awareness' },
   { to: '/extension', label: 'Extension' },
 ];
@@ -18,14 +17,14 @@ export function Navbar() {
   const { user, logout } = useAppStore();
 
   return (
-    <nav className="sticky top-0 z-40 bg-surface/90 backdrop-blur border-b border-white/10">
+    <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="h-9 w-9 rounded-xl bg-primary-500 flex items-center justify-center font-bold text-white">
             S
           </div>
           <div>
-            <p className="text-lg font-bold text-white">SafeNet</p>
+            <p className="text-lg font-bold text-gray-900">SafeNet</p>
             <p className="text-xs text-muted -mt-1">Cyber safety for all</p>
           </div>
         </Link>
@@ -36,7 +35,7 @@ export function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                  isActive ? 'bg-white/10 text-white' : 'text-muted hover:text-white'
+                  isActive ? 'bg-primary-500 text-white' : 'text-muted hover:text-primary-600 hover:bg-orange-50'
                 }`
               }
             >
@@ -61,7 +60,7 @@ export function Navbar() {
           )}
         </div>
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-gray-900"
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
         >
@@ -71,7 +70,7 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="md:hidden border-t border-white/10 bg-surface"
+            className="md:hidden border-t border-gray-200 bg-white"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -83,7 +82,7 @@ export function Navbar() {
                   to={link.to}
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                      isActive ? 'bg-white/10 text-white' : 'text-muted hover:text-white'
+                      isActive ? 'bg-primary-500 text-white' : 'text-muted hover:text-primary-600 hover:bg-orange-50'
                     }`
                   }
                   onClick={() => setOpen(false)}

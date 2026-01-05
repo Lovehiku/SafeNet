@@ -17,8 +17,8 @@ export function ScreenshotAnalyzerPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
       <div className="flex flex-col gap-2">
-        <p className="text-xs uppercase text-primary-200 font-semibold">AI Assistance</p>
-        <h1 className="text-3xl font-bold text-white">Screenshot Analyzer</h1>
+        <p className="text-xs uppercase text-primary-600 font-semibold">AI Assistance</p>
+        <h1 className="text-3xl font-bold text-gray-900">Screenshot Analyzer</h1>
         <p className="text-muted">Upload or drop a screenshot. We simulate detection of TFGBV signals.</p>
       </div>
 

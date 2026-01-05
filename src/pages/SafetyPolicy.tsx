@@ -1,7 +1,7 @@
 export function SafetyPolicyPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-4">
-      <h1 className="text-3xl font-bold text-white">Safety Policy</h1>
+      <h1 className="text-3xl font-bold text-gray-900">Safety Policy</h1>
 
       <p className="text-muted">
         SafeNet is committed to creating safer digital spaces and supporting

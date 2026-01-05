@@ -5,8 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { DashboardPage } from './pages/Dashboard';
 import { AlertCenterPage } from './pages/AlertCenter';
-import { ScreenshotAnalyzerPage } from './pages/ScreenshotAnalyzer';
-import { FakeProfileDetectorPage } from './pages/FakeProfileDetector';
+import { AnalyzerPage } from './pages/Analyzer';
 import { SettingsPage } from './pages/Settings';
 import { AwarenessHelpPage } from './pages/AwarenessHelp';
 import { ExtensionInfoPage } from './pages/ExtensionInfo';
@@ -63,7 +62,7 @@ export default function App() {
   }, [init]);
 
   return (
-    <div className="min-h-screen bg-surface text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <main className="pb-12">
         <AnimatePresence mode="wait" initial={false}>
@@ -90,18 +89,12 @@ export default function App() {
               path="/analyzer"
               element={
                 <ProtectedRoute>
-                  <ScreenshotAnalyzerPage />
+                  <AnalyzerPage />
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="/fake-profile"
-              element={
-                <ProtectedRoute>
-                  <FakeProfileDetectorPage />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/fake-profile" element={<Navigate to="/analyzer" replace />} />
+            <Route path="/screenshot-analyzer" element={<Navigate to="/analyzer" replace />} />
             <Route
               path="/settings"
               element={

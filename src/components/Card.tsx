@@ -13,7 +13,7 @@ export function Card({ title, subtitle, actions, children }: CardProps) {
       {(title || actions) && (
         <div className="flex items-start justify-between gap-3">
           <div>
-            {title && <h3 className="text-lg font-semibold text-white">{title}</h3>}
+            {title && <h3 className="text-lg font-semibold text-gray-900">{title}</h3>}
             {subtitle && <p className="text-sm text-muted">{subtitle}</p>}
           </div>
           {actions}

@@ -1,7 +1,7 @@
 export function TermsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-4">
-      <h1 className="text-3xl font-bold text-white">Terms of Service</h1>
+      <h1 className="text-3xl font-bold text-gray-900">Terms of Service</h1>
 
       <p className="text-muted">
         Welcome to SafeNet. By using this application, you agree to the terms

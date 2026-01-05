@@ -61,8 +61,8 @@ export function AlertCenterPage() {
     <div className="max-w-6xl mx-auto px-4 py-8 space-y-6">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div>
-          <p className="text-xs uppercase text-primary-200 font-semibold">Incidents</p>
-          <h1 className="text-3xl font-bold text-white">Alert Center</h1>
+          <p className="text-xs uppercase text-primary-600 font-semibold">Incidents</p>
+          <h1 className="text-3xl font-bold text-gray-900">Alert Center</h1>
           <p className="text-muted">Review, triage, and download reports quickly.</p>
         </div>
         <div className="flex gap-2">
@@ -91,22 +91,22 @@ export function AlertCenterPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <Badge label={openAlert.severity.toUpperCase()} severity={openAlert.severity} />
-              <span className="text-xs px-2 py-1 rounded-full bg-white/5 border border-white/10 capitalize">
+              <span className="text-xs px-2 py-1 rounded-full bg-gray-50 border border-gray-200 capitalize">
                 {openAlert.status}
               </span>
               <span className="text-xs text-muted">{new Date(openAlert.date).toLocaleString()}</span>
             </div>
             <p className="text-muted text-sm">{openAlert.summary}</p>
             <div>
-              <p className="text-sm font-semibold text-white">Suggested action</p>
+              <p className="text-sm font-semibold text-gray-900">Suggested action</p>
               <p className="text-muted text-sm">{openAlert.recommendedAction}</p>
             </div>
             {openAlert.evidence?.length ? (
               <div>
-                <p className="text-sm font-semibold text-white">Evidence</p>
+                <p className="text-sm font-semibold text-gray-900">Evidence</p>
                 <div className="flex gap-2 flex-wrap">
                   {openAlert.evidence.map((item) => (
-                    <span key={item} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                    <span key={item} className="px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-xs">
                       {item}
                     </span>
                   ))}
@@ -138,7 +138,7 @@ export function AlertCenterPage() {
                 Takedown template
               </button>
               <button
-                className="btn-ghost text-danger"
+                className="btn-ghost text-red-600"
                 onClick={async () => {
                   if (openAlert) {
                     await deleteAlert(openAlert.id);
@@ -156,7 +156,7 @@ export function AlertCenterPage() {
         {openAlert && (
           <div className="space-y-3 text-sm text-muted">
             <p>Copy and send to the platform/provider:</p>
-            <div className="bg-white/5 border border-white/10 p-3 rounded">
+            <div className="bg-gray-50 border border-gray-200 p-3 rounded">
               <p>Subject: Content takedown request</p>
               <p>
                 Alert Title: {openAlert.title} | Severity: {openAlert.severity}

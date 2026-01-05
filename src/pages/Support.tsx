@@ -1,7 +1,7 @@
 export function SupportPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-4">
-      <h1 className="text-3xl font-bold text-white">Support</h1>
+      <h1 className="text-3xl font-bold text-gray-900">Support</h1>
 
       <p className="text-muted">
         If you are experiencing online harassment, abuse, impersonation, or

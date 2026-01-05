@@ -13,21 +13,21 @@ export function FakeProfileDetectorPage() {
     setStatus('Scan complete.');
   };
   const riskLevelColors = {
-    low: 'bg-safe/15 text-safe border-safe/30',
-    medium: 'bg-caution/15 text-caution border-caution/30',
-    high: 'bg-danger/15 text-danger border-danger/30',
+    low: 'bg-green-50 text-green-700 border border-green-200',
+    medium: 'bg-orange-50 text-orange-700 border border-orange-200',
+    high: 'bg-red-50 text-red-700 border border-red-200',
   };
 
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
       <div className="flex flex-col gap-2">
-        <p className="text-xs uppercase text-primary-200 font-semibold">Identity Safety</p>
-        <h1 className="text-3xl font-bold text-white">Fake Profile Detector</h1>
+        <p className="text-xs uppercase text-primary-600 font-semibold">Identity Safety</p>
+        <h1 className="text-3xl font-bold text-gray-900">Fake Profile Detector</h1>
         <p className="text-muted">Find lookalike or cloned accounts quickly.</p>
       </div>
 
-      <div className="card-surface p-6 border border-dashed border-white/15">
+      <div className="card-surface p-6 border-2 border-dashed border-gray-200">
         <label className="btn-primary cursor-pointer inline-flex items-center gap-2">
           <input
             type="file"
@@ -48,7 +48,7 @@ export function FakeProfileDetectorPage() {
       </div>
 
       {fakeProfileResult && (
-        <div className="card-surface p-5 border border-white/10">
+        <div className="card-surface p-5">
           <div className="flex items-center justify-between mb-4">
             <div>
               <p className="text-sm text-muted uppercase tracking-wide mb-1">Risk Level</p>
@@ -58,12 +58,12 @@ export function FakeProfileDetectorPage() {
             </div>
             <div className="text-right">
               <p className="text-sm text-muted uppercase tracking-wide mb-1">Confidence</p>
-              <p className="text-lg font-semibold text-white">{fakeProfileResult.confidence}%</p>
+              <p className="text-lg font-semibold text-gray-900">{fakeProfileResult.confidence}%</p>
             </div>
           </div>
           <div className="mt-4">
             <p className="text-sm text-muted uppercase tracking-wide mb-2">Reason</p>
-            <p className="text-white">{fakeProfileResult.reason}</p>
+            <p className="text-gray-900">{fakeProfileResult.reason}</p>
           </div>
           <div className="flex gap-2 mt-4">
             <button
@@ -103,10 +103,10 @@ export function FakeProfileDetectorPage() {
 
          <div className="grid md:grid-cols-2 gap-4">
            {fakeMatches.map((match) => (
-             <div key={match.id} className="card-surface p-4 border border-white/10">
+             <div key={match.id} className="card-surface p-4">
                <div className="flex items-center justify-between mb-2">
-                 <p className="text-white font-semibold">{match.platform}</p>
-                 <span className="px-2 py-1 rounded-full text-xs bg-primary-500/20 text-primary-100">
+                 <p className="text-gray-900 font-semibold">{match.platform}</p>
+                 <span className="px-2 py-1 rounded-full text-xs bg-orange-100 text-orange-700 border border-orange-200">
                    {match.similarity}% match
                  </span>
                </div>

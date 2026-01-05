@@ -1,9 +1,9 @@
 import { Severity } from '../types';
 
 const severityStyles: Record<Severity, string> = {
-  low: 'bg-safe/15 text-safe border-safe/40',
-  medium: 'bg-caution/15 text-caution border-caution/40',
-  high: 'bg-danger/15 text-danger border-danger/40',
+  low: 'bg-green-50 text-green-700 border-green-200',
+  medium: 'bg-orange-50 text-orange-700 border-orange-200',
+  high: 'bg-red-50 text-red-700 border-red-200',
 };
 
 export function Badge({ label, severity }: { label: string; severity: Severity }) {

@@ -21,7 +21,7 @@ export function FilterBar({ severity, type, onSeverityChange, onTypeChange }: Fi
         <select
           value={severity}
           onChange={handleSeverityChange}
-          className="w-full mt-2 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:border-primary-400 outline-none"
+          className="w-full mt-2 bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none text-gray-900"
         >
           <option value="all">All</option>
           <option value="high">High</option>
@@ -34,7 +34,7 @@ export function FilterBar({ severity, type, onSeverityChange, onTypeChange }: Fi
         <select
           value={type}
           onChange={handleTypeChange}
-          className="w-full mt-2 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:border-primary-400 outline-none"
+          className="w-full mt-2 bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none text-gray-900"
         >
           <option value="all">All</option>
           <option value="harassment">Harassment</option>

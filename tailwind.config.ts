@@ -7,29 +7,30 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f1f7fb',
-          100: '#dfeaf4',
-          200: '#c4d8ea',
-          300: '#9cbddc',
-          400: '#6f9dca',
-          500: '#4a7fb7',
-          600: '#38669f',
-          700: '#2f5382',
-          800: '#2a4568',
-          900: '#253b57',
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316', // Main orange
+          600: '#ea580c', // Darker orange for hover
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
         },
-        safe: '#3b924a',
-        caution: '#d6a431',
-        danger: '#d64545',
-        surface: '#0b1727',
-        muted: '#8898aa',
+        // Status colors adapted for white background
+        safe: '#22c55e', // Light green that works on white
+        caution: '#f97316', // Orange (brand color)
+        danger: '#dc2626', // Red-orange for danger
+        surface: '#ffffff', // White background
+        muted: '#6b7280', // Neutral gray for muted text
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans],
         display: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
-        soft: '0 10px 40px rgba(0, 0, 0, 0.12)',
+        soft: '0 4px 20px rgba(0, 0, 0, 0.08)',
       },
     },
   },

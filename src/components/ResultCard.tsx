@@ -8,28 +8,28 @@ const riskCopy: Record<AnalysisResult['riskLevel'], string> = {
 
 export function ResultCard({ result }: { result: AnalysisResult }) {
   const riskClass = {
-    safe: 'bg-safe/15 text-safe border-safe/30',
-    caution: 'bg-caution/15 text-caution border-caution/30',
-    danger: 'bg-danger/15 text-danger border-danger/30',
+    safe: 'bg-green-50 text-green-700 border-green-200',
+    caution: 'bg-orange-50 text-orange-700 border-orange-200',
+    danger: 'bg-red-50 text-red-700 border-red-200',
   }[result.riskLevel];
 
   return (
-    <div className="card-surface p-5 border border-white/10">
+    <div className="card-surface p-5">
       <div className="flex items-center justify-between gap-3 mb-3">
         <div>
-          <p className={`text-sm font-semibold ${riskClass}`.trim()}>
+          <p className={`text-sm font-semibold px-3 py-1 rounded-full border ${riskClass}`}>
             Risk level: {result.riskLevel.toUpperCase()} ({result.confidence}% confidence)
           </p>
-          <h4 className="text-xl font-semibold text-white mt-1">{riskCopy[result.riskLevel]}</h4>
+          <h4 className="text-xl font-semibold text-gray-900 mt-1">{riskCopy[result.riskLevel]}</h4>
         </div>
-        <div className={`px-3 py-1 rounded-full text-xs font-semibold ${riskClass}`}>AI generated</div>
+        <div className={`px-3 py-1 rounded-full text-xs font-semibold border ${riskClass}`}>AI generated</div>
       </div>
       <p className="text-muted text-sm">{result.summary}</p>
       <div className="mt-4">
-        <p className="text-sm font-semibold text-white mb-2">Categories</p>
+        <p className="text-sm font-semibold text-gray-900 mb-2">Categories</p>
         <div className="flex flex-wrap gap-2">
           {result.categories.map((cat) => (
-            <span key={cat} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs capitalize">
+            <span key={cat} className="px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-xs capitalize text-gray-700">
               {cat}
             </span>
           ))}
@@ -37,10 +37,10 @@ export function ResultCard({ result }: { result: AnalysisResult }) {
       </div>
       {result.categoryConfidence && result.categoryConfidence.length > 0 && (
         <div className="mt-4">
-          <p className="text-sm font-semibold text-white mb-2">Category confidence</p>
+          <p className="text-sm font-semibold text-gray-900 mb-2">Category confidence</p>
           <div className="flex flex-wrap gap-2">
             {result.categoryConfidence.map((cc) => (
-              <span key={cc.category} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+              <span key={cc.category} className="px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-xs text-gray-700">
                 {cc.category}: {cc.confidence}%
               </span>
             ))}
@@ -48,7 +48,7 @@ export function ResultCard({ result }: { result: AnalysisResult }) {
         </div>
       )}
       <div className="mt-4">
-        <p className="text-sm font-semibold text-white mb-2">Suggested steps</p>
+        <p className="text-sm font-semibold text-gray-900 mb-2">Suggested steps</p>
         <ul className="list-disc list-inside text-muted space-y-1 text-sm">
           {result.suggestions.map((tip) => (
             <li key={tip}>{tip}</li>
